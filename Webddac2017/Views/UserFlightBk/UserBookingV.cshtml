@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Webddac2017.Models.Flightbooking>
+
+@{
+    Layout = "~/Views/Shared/AfterLogin.cshtml";
+    ViewBag.Title = "UserBookingV";
+}
+<div class="panel">
+    <div class="panel-body">
+        <h2>Flight Booking</h2>
+        <h4>User Account</h4>
+        <h5>Sign in User: @Session["userName"].ToString()</h5>
+
+        <p>
+            @Html.ActionLink("Book Flight", "UserCreate")
+        </p>
+        <table class="table">
+            <tr>
+                <!--<th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>-->
+                <th>
+                    @Html.DisplayNameFor(model => model.Passenger_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Flight_Location)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Flight_Destination)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Flight_Time)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Class)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Seat)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Gate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Passenger_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Flight_Location)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Flight_Destination)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Flight_Time)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Class)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Seat)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Gate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "UserDetails", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+
+        </table>
+        </div>
+</div>

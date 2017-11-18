@@ -1,0 +1,85 @@
+﻿@model Webddac2017.Models.Flightbooking
+
+@{
+    Layout = "~/Views/Shared/AfterLogin.cshtml";
+    ViewBag.Title = "Details";
+}
+<div class="panel">
+    <div class="panel-body">
+        <h2>Flight Details</h2>
+
+        <div>
+            <h4>Flightbooking</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Passenger_Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Passenger_Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Flight_Location)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Flight_Location)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Flight_Destination)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Flight_Destination)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Flight_Time)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Flight_Time)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Class)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Class)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Seat)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Seat)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Gate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Gate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Date)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Date)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Back", "UserBookingV")
+        </p>
+        </div>
+</div>
